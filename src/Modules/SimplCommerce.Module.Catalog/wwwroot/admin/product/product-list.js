@@ -10,6 +10,15 @@
         vm.translate = translateService;
         vm.products = [];
         vm.enableCultures = $window.Global_EnableCultures;
+        vm.filterBoxIsOpen = true;
+        vm.createdOnPickers = {
+            after: {
+                isOpen: false
+            },
+            before: {
+                isOpen: false
+            }
+        };
 
         vm.getProducts = function getProducts(tableState) {
             vm.tableStateRef = tableState;
