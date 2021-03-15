@@ -23,6 +23,22 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-md-3 control-label">{{::vm.translate.get('Category')}}</label>
+                    <div class="col-md-7">
+                        <select class="form-control"
+                                ng-model="vm.filter.CategoryId"
+                                ng-options="category.id as category.name for category in vm.categories">
+                            <option value="">Top</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="col-md-3 control-label">{{::vm.translate.get('Brand')}}</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" id="brand" ng-model="vm.filter.Brand">
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="control-label col-md-3">{{::vm.translate.get('Has Options')}}</label>
                     <div class="col-md-7">
                         <select class="form-control" ng-model="vm.filter.HasOptions">
@@ -32,6 +48,8 @@
                         </select>
                     </div>
                 </div>
+            </div>
+            <div class="form-horizontal col-md-5">
                 <div class="form-group">
                     <label class="control-label col-md-3">{{::vm.translate.get('Is Visible Individually')}}</label>
                     <div class="col-md-7">
@@ -52,8 +70,6 @@
                         </select>
                     </div>
                 </div>
-            </div>
-            <div class="form-horizontal col-md-5">
                 <div class="form-group">
                     <label class="control-label col-md-3">{{::vm.translate.get('Сreated')}}&ensp;{{::vm.translate.get('From')}}</label>
                     <div class="col-md-3">
@@ -76,22 +92,6 @@
                                 </button>
                             </span>
                         </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="name" class="col-md-3 control-label">{{::vm.translate.get('Brand')}}</label>
-                    <div class="col-md-7">
-                        <input type="text" class="form-control" id="brand" ng-model="vm.filter.Brand">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-3 control-label">{{::vm.translate.get('Category')}}</label>
-                    <div class="col-md-7">
-                        <select class="form-control"  
-                                ng-model="vm.filter.CategoryId"
-                                ng-options="category.id as category.name for category in vm.categories">
-                            <option value="">Top</option>
-                        </select>
                     </div>
                 </div>
             </div>
